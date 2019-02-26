@@ -14,7 +14,7 @@ public class ArrayConcepts {
 		i[2] = 30;
 		i[3] = 40;
 		i[4] = 50;
-		i[5] = 60;
+		i[5] = 65;
 		
 		
 		System.out.println(i[4]);
