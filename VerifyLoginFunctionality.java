@@ -80,7 +80,14 @@ public class VerifyLoginFunctionality {
 	@AfterMethod
 	public void closebrow()
 	{
-	cm.closeApp();
+	Commanmethod.report.endTest(Commanmethod.logger);
+		//To capture screenshot path and store the path of the screenshot in the string "screenshotPath"
+        //We do pass the path captured by this mehtod in to the extent reports using "logger.addScreenCapture" method. 
+        String screenshotPath = Commanmethod.extendScreenshot();
+//To add it in the extent report 
+       
+        Commanmethod.logger.log(LogStatus.PASS,Commanmethod.logger.addScreenCapture(screenshotPath));
+		Commanmethod.report.flush();
 	
 	}
 }
